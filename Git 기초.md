@@ -167,6 +167,14 @@ $ git remote -v
 
 ```bash
 $ git push origin master
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 2.14 KiB | 2.14 MiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/dasom-elise/TIL.git
+   e8d63f9..f9c0e9a  master -> master
 ```
 
 origin으로 설정된 원격 저장소에 push한다.
