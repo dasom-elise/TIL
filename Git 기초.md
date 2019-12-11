@@ -27,6 +27,22 @@ user.name = # my name
 
 ## 로컬 저장소에서 활용하기
 
+gitignore
+
+프로젝트를 진행할 때, git으로 관리하지 않을 파일 혹은 폴더들을 설정할 수 있다.
+
+```
+*.xlsx
+a.txt
+.ipynb_checkpoints/
+```
+
+프로젝트 시작시 어떠한 내용을 담아야 할지 모르겠다면
+
+[gitignore](http://gitignore.io/)에서 검색한다.
+
+예) python, r, jupyter notebook
+
 ### 1. git 저장소 설정
 
 특정 프로젝트 폴더에서 git을 활용하기 위해서는 아래의 명령어를 입력한다.
@@ -182,4 +198,3 @@ origin으로 설정된 원격 저장소에 push한다.
 이후에 변경된 사항(commit)이 발생하였을 때 git push origin master  명령어를 통해서
 
 매번 업로드를 해줄 수 있다.
-
