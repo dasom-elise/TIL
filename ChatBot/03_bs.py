@@ -10,8 +10,9 @@ soup = BeautifulSoup(html,'html.parser')
 print(type(soup))
 #=> <class 'bs4.BeautifulSoup'>
 # 3. 가져올 태그의 선택자를 넣고 결과물을 가져온다.
-# 기본적인 사용법 
-# 1) .selector_one(선택자): 해당하는 태그 하나
-# 2) .selector(선택자): 해당하는 모든 태그
+
+## 기본적인 사용법 ##
+## 1) .selector_one(선택자): 해당하는 태그 하나
+## 2) .selector(선택자): 해당하는 모든 태그
 kospi = soup.select_one("#KOSPI_now").text
 print(kospi)
