@@ -67,7 +67,33 @@ def google():
     return render_template('google.html')
 
 
+# 사용자로부터 입력받을 페이지를 렌더링
+@app.route('/vonvon')
+def vonvon():
+    return render_template('vonvon.html')
 
+
+# 요청 받은 데이터를 가공해서 사용자에게 응답해줌
+@app.route('/godmademe')
+def godmademe():
+    name = request.args.get('name')
+    first_options = ['김','커피','오징어','바닐라','바닷물']
+    second_options = ['용기','지혜','기억력','IQ','잔머리']
+    third_options = ['키','운동신경','음악적 재능','악마의 재능','연기력']
+    # 각 데이터 리스트 별로 요소를 하나씩 무작위로 뽑음
+    first = random.choice(first_options)
+    second = random.choice(second_options)
+    third = random.choice(third_options)
+
+    a_value = ['을/를 먹으면서','을/를 들고','을/를 넣고']
+    b_value = ['을/를 깨알같이 넣고','을/를 쏟아서', '을/를 깜빡하고']
+    c_value = ['을/를 뺐다','을/를 가득 채웠네', '만 줬네']
+    a = random.choice(a_value)
+    b = random.choice(b_value)
+    c = random.choice(c_value)
+
+
+    return render_template('godmademe.html',name = name, x = first, y =  second, z = third, a=a,b=b,c=c)
 
 
 ## app.py 가장 하단에 위치
